@@ -27,6 +27,9 @@ variable "password" {
 variable "accessKey" {
   type = string
 }
+variable "namespaces" {
+  type = list 
+}
 
 resource helm_release appdiksfrtfcb {
   name       = "appdcluster"
@@ -55,7 +58,7 @@ resource helm_release appdiksfrtfcb {
   }
   set {
     name  = "clusterAgent.nsToMonitor"
-    value = default
+    value = var.namespaces
   }
   set {
     name  = "install.metrics-server"
