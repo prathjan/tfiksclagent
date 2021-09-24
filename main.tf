@@ -28,7 +28,7 @@ variable "accessKey" {
   type = string
 }
 variable "namespaces" {
-  type = list(map(string)) 
+  type = list(string) 
 }
 
 resource helm_release appdiksfrtfcb {
