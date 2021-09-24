@@ -58,7 +58,7 @@ resource helm_release appdiksfrtfcb {
   }
   set {
     name  = "clusterAgent.nsToMonitor"
-    value = var.namespaces
+    value = "${var.namespaces}"
   }
   set {
     name  = "install.metrics-server"
