@@ -12,6 +12,21 @@ data "terraform_remote_state" "iksws" {
 variable "ikswsname" {
   type = string
 }
+variable "url" {
+  type = string
+}
+variable "account" {
+  type = string
+}
+variable "username" {
+  type = string
+}
+variable "password" {
+  type = string
+}
+variable "accessKey" {
+  type = string
+}
 
 resource helm_release appdiksfrtfcb {
   name       = "appdcluster"
