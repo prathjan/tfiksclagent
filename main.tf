@@ -28,7 +28,7 @@ variable "accessKey" {
   type = string
 }
 variable "namespaces" {
-  type = list(string) 
+  type = string 
 }
 
 resource helm_release appdiksfrtfcb {
@@ -58,7 +58,7 @@ resource helm_release appdiksfrtfcb {
   }
   set {
     name  = "clusterAgent.nsToMonitor"
-    value = "default"
+    value = var.namespaces
   }
   set {
     name  = "install.metrics-server"
