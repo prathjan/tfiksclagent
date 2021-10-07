@@ -58,7 +58,7 @@ resource helm_release appdiksfrtfcb {
   }
   set {
     name  = "clusterAgent.nsToMonitorRegex"
-    value = "{ \.\* }"
+    value = ".*"
     # value = "{ default,appdynamics }"
   }
   set {
