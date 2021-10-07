@@ -101,6 +101,10 @@ resource helm_release appdiksfrtfcb {
     name  = "instrumentationConfig.appNameStrategy"
     value = "namespace"
   }
+  set {
+    name  = "logLevel"
+    value = "DEBUG"
+  }
 }
 
 provider "helm" {
