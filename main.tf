@@ -57,13 +57,13 @@ resource helm_release appdiksfrtfcb {
     value = var.accessKey
   }
   set {
-    name  = "clusterAgent.nsToMonitor"
-    value = "{ default }"
+    name  = "clusterAgent.nsToMonitorRegex"
+    value = "{ .* }"
     # value = "{ default,appdynamics }"
   }
   set {
     name  = "install.metrics-server"
-    value = "true"
+    value = "false"
   }
   set {
     name  = "instrumentationConfig.imageInfo.java.image"
