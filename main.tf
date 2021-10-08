@@ -98,11 +98,15 @@ resource helm_release appdiksfrtfcb {
     value = "namespace"
   }
   set {
-    name  = "instrumentationConfig.appNameStrategy"
-    value = "namespace"
+    name  = "instrumentationRules.namespaceRegex"
+    value = "default"
   }
   set {
-    name  = "logLevel"
+    name  = "instrumentationRules.language"
+    value = "java"
+  }
+  set {
+    name  = "logProperties.logLevel"
     value = "DEBUG"
   }
 }
