@@ -99,7 +99,7 @@ resource helm_release appdiksfrtfcb {
   }
   set {
     name  = "instrumentationConfig.instrumentationRules.namespaceRegex"
-    value = "default"
+    value = "{ default }"
   }
   set {
     name  = "instrumentationConfig.instrumentationRules.language"
