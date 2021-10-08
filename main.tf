@@ -98,11 +98,11 @@ resource helm_release appdiksfrtfcb {
     value = "namespace"
   }
   set {
-    name  = "instrumentationRules.namespaceRegex"
+    name  = "instrumentationConfig.instrumentationRules.namespaceRegex"
     value = "default"
   }
   set {
-    name  = "instrumentationRules.language"
+    name  = "instrumentationConfig.instrumentationRules.language"
     value = "java"
   }
   set {
