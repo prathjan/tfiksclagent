@@ -65,50 +65,50 @@ resource helm_release appdiksfrtfcb {
     name  = "install.metrics-server"
     value = "false"
   }
-  set {
-    name  = "instrumentationConfig.imageInfo.java.image"
-    value = "docker.io/appdynamics/java-agent:21.3.0"
-  }
-  set {
-    name  = "instrumentationConfig.imageInfo.java.agentMountPath"
-    value = "/opt/appdynamics"
-  }
-  set {
-    name  = "instrumentationConfig.imageInfo.java.imagePullPolicy"
-    value = "Always"
-  }
-  set {
-    name  = "instrumentationConfig.enabled"
-    value = "true"
-  }
-  set {
-    name  = "instrumentationConfig.instrumentationMethod"
-    value = "Env"
-  }
-  set {
-    name  = "instrumentationConfig.nsToInstrumentRegex"
-    value = "default"
-  }
+#  set {
+#    name  = "instrumentationConfig.imageInfo.java.image"
+#    value = "docker.io/appdynamics/java-agent:21.3.0"
+#  }
+#  set {
+#    name  = "instrumentationConfig.imageInfo.java.agentMountPath"
+#    value = "/opt/appdynamics"
+#  }
+#  set {
+#    name  = "instrumentationConfig.imageInfo.java.imagePullPolicy"
+#    value = "Always"
+#  }
+#  set {
+#    name  = "instrumentationConfig.enabled"
+#    value = "true"
+#  }
+#  set {
+#    name  = "instrumentationConfig.instrumentationMethod"
+#    value = "Env"
+#  }
+#  set {
+#    name  = "instrumentationConfig.nsToInstrumentRegex"
+#    value = "default"
+#  }
   set {
     name  = "instrumentationConfig.defaultAppName"
     value = "IKSChaiStore"
   }
-  set {
-    name  = "instrumentationConfig.appNameStrategy"
-    value = "namespace"
-  }
-  set {
-    name  = "instrumentationConfig.instrumentationRules.namespaceRegex"
-    value = "[ default ]"
-  }
-  set {
-    name  = "instrumentationConfig.instrumentationRules.language"
-    value = "java"
-  }
-  set {
-    name  = "logProperties.logLevel"
-    value = "DEBUG"
-  }
+#  set {
+#    name  = "instrumentationConfig.appNameStrategy"
+#    value = "namespace"
+#  }
+#  set {
+#    name  = "instrumentationConfig.instrumentationRules.namespaceRegex"
+#    value = "[ default ]"
+#  }
+#  set {
+#    name  = "instrumentationConfig.instrumentationRules.language"
+#    value = "java"
+#  }
+#  set {
+#    name  = "logProperties.logLevel"
+#    value = "DEBUG"
+#  }
 }
 
 provider "helm" {
